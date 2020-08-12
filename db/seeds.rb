@@ -19,7 +19,7 @@
   )
 end
 
-puts "Topics created"
+puts "Topics created."
 
 10.times do |x|
   Blog.create!(
@@ -65,4 +65,14 @@ end
   )
 end
 
-puts "Portfolio items created"
+puts "Portfolio items created."
+
+3.times do |x|
+  Technology.create!(
+    name: "Technology #{x}",
+    portfolio_id: Portfolio.last.id,
+
+  )
+end
+
+puts "Technologies created."
