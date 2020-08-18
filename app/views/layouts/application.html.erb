@@ -20,5 +20,14 @@
       <%= link_to "Register", new_user_registration_path %>
     <% end %>
     <%= yield %>
+    <br>
+    <h3>PARAMS</h3>
+    <%= params.inspect %>
+
+    <br>
+    <h3>SESSION</h3>
+
+    <p>source is - <%= session[:source] %></p>
+    <%= session.inspect %>
   </body>
 </html>
