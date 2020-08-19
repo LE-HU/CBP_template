@@ -7,7 +7,7 @@
 
     <meta name="keywords" content="<%= @seo_keywords %>">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -15,7 +15,6 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= render "shared/nav" %>
 
     <% if current_user.is_a?(User) %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -24,14 +23,12 @@
       <%= link_to "Register", new_user_registration_path %>
     <% end %>
     <%= yield %>
-    <br>
+
+    <%= render "shared/nav" %>
+
+
     <h3>PARAMS</h3>
     <%= params.inspect %>
 
-    <%# <br>
-    <h3>SESSION</h3> %>
-
-    <p>source is - <%= session[:source] %></p>
-    <%= session.inspect %>
   </body>
 </html>
