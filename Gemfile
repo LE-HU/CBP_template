@@ -34,6 +34,8 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'bootstrap', '~> 4.5', '>= 4.5.2'
 gem 'jquery-rails'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
