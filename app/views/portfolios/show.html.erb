@@ -1,13 +1,30 @@
-<h1>Portfolio <%= params[:id] %></h1>
-<p><%= link_to "Back to index", portfolios_path %></p>
+<div class="container">
 
-<p><%= @portfolio_item.title %></p>
-<p><%= @portfolio_item.subtitle %></p>
-<p><%= @portfolio_item.body %></p>
-<h2>Technologies Used</h2>
-<% @portfolio_item.technologies.each do |t| %>
-  <p> <%= t.name %> </p>
-<%end%>
-<%= image_tag @portfolio_item.main_image %>
-<p><%= link_to "Edit Item", edit_portfolio_path(@portfolio_item) %></p>
-<p><%= link_to "Delete Item", portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image %>
+    </div>
+    <div class="col-md-5">
+      <h1>Portfolio <%= params[:id] %></h1>
+
+      <p><%= @portfolio_item.title %></p>
+      <hr>
+      <p><%= @portfolio_item.subtitle %></p>
+      <p><%= @portfolio_item.body %></p>
+      <hr>
+      <h3>Technologies Used</h3>
+      <% @portfolio_item.technologies.each do |t| %>
+        <p> <%= t.name %> </p>
+      <%end%>
+
+
+      <p><%= link_to "Edit Item", edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %></p>
+      <p><%= link_to "Delete Item", portfolio_path(@portfolio_item),
+                                    method: :delete,
+                                    data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></p>
+
+    </div>
+
+  </div>
+
+</div>
