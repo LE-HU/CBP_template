@@ -37,6 +37,8 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.14'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

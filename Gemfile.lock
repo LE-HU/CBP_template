@@ -68,6 +68,7 @@ GEM
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.3)
+    cocoon (1.2.14)
     coderay (1.1.3)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
@@ -230,6 +231,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5, >= 4.5.2)
   byebug
+  cocoon (~> 1.2, >= 1.2.14)
   devise (~> 4.7, >= 4.7.2)
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   friendly_id (~> 5.3)
