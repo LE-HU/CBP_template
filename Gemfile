@@ -22,6 +22,9 @@ gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.14'
+gem 'twitter', '~> 7.0'
+gem 'dotenv', '~> 2.7', '>= 2.7.6'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 
 group :development, :test do
 

@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -13,6 +13,7 @@ require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+require "dotenv-rails"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -31,5 +32,8 @@ module PersonalWebsite
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Eager loading for lib
+    config.eager_load_paths << "#{Rails.root}/lib"
   end
 end
