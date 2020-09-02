@@ -291,6 +291,7 @@ DEPENDENCIES
   pry-byebug (~> 3.9)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
+  redis (~> 4.2, >= 4.2.1)
   sass-rails (>= 6)
   spring
   spring-watcher-listen (~> 2.0.0)
