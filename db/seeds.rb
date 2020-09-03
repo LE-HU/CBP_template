@@ -38,7 +38,7 @@ puts "Blog posts created."
 
 5.times do |x|
   Skill.create!(
-    title: "Rails #{x}",
+    title: "Skill #{x}",
     percent_utilized: 15,
   )
 end
@@ -48,17 +48,7 @@ puts "Skills created."
 7.times do |x|
   Portfolio.create!(
     title: "Item #{x}",
-    subtitle: "Ruby on Rails",
-    body: "Lorem ipsum body latin latin",
-    main_image: "http://placehold.it/600x400",
-    thumb_image: "http://placehold.it/350x200",
-  )
-end
-
-2.times do |x|
-  Portfolio.create!(
-    title: "Item #{x}",
-    subtitle: "Angular",
+    subtitle: "Subtitle #{x}",
     body: "Lorem ipsum body latin latin",
     main_image: "http://placehold.it/600x400",
     thumb_image: "http://placehold.it/350x200",

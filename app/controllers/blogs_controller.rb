@@ -20,7 +20,11 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @page_title = @blog.title
+    if logged_in?(:site_admin) || @blog.published?
+      @page_title = @blog.title
+    else
+      redirect_to blogs_path, notice: "You are not authorized to access this page."
+    end
   end
 
   # GET /blogs/new
@@ -81,6 +85,6 @@ class BlogsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(:title, :body, :topic_id)
   end
 end
