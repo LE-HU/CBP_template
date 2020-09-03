@@ -18,7 +18,6 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
-    # 3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -56,16 +55,10 @@ class PortfoliosController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  # def set_blog
-  #   @blog = Blog.find(params[:id])
-  # end
-
   def set_portfolio_item
     @portfolio_item = Portfolio.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def portfolio_params
     params.require(:portfolio).permit(:title,
                                       :subtitle,

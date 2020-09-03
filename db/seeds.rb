@@ -21,7 +21,33 @@ end
 
 puts "Topics created."
 
-10.times do |x|
+3.times do |x|
+  Blog.create!(
+    title: "Blog post #{x}",
+    body: "lorem ipsum paragraph latin sentence ok
+    lorem ipsum paragraph latin sentence ok
+    lorem ipsum paragraph latin sentence ok
+    lorem ipsum paragraph latin sentence ok
+    lorem ipsum paragraph latin sentence ok
+    ",
+    topic_id: Topic.first.id,
+  )
+end
+
+3.times do |x|
+  Blog.create!(
+    title: "Blog post #{x}",
+    body: "lorem ipsum paragraph latin sentence ok
+    lorem ipsum paragraph latin sentence ok
+    lorem ipsum paragraph latin sentence ok
+    lorem ipsum paragraph latin sentence ok
+    lorem ipsum paragraph latin sentence ok
+    ",
+    topic_id: Topic.second.id,
+  )
+end
+
+3.times do |x|
   Blog.create!(
     title: "Blog post #{x}",
     body: "lorem ipsum paragraph latin sentence ok

@@ -1,12 +1,11 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_sidebar_topics, except: [:create, :update, :destroy, :toggle_status]
   access all: [:show, :index],
          user: { except: [:destroy, :new, :create, :edit, :update, :toggle_status] },
          site_admin: :all
   layout "blog"
 
-  # GET /blogs
-  # GET /blogs.json
   def index
     if logged_in?(:site_admin)
       @blogs = Blog.recent.page(params[:page]).per(5)
@@ -17,8 +16,6 @@ class BlogsController < ApplicationController
     @page_title = "Blog"
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.json
   def show
     if logged_in?(:site_admin) || @blog.published?
       @page_title = @blog.title
@@ -27,17 +24,13 @@ class BlogsController < ApplicationController
     end
   end
 
-  # GET /blogs/new
   def new
     @blog = Blog.new
   end
 
-  # GET /blogs/1/edit
   def edit
   end
 
-  # POST /blogs
-  # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
 
@@ -50,8 +43,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /blogs/1
-  # PATCH/PUT /blogs/1.json
   def update
     respond_to do |format|
       if @blog.update(blog_params)
@@ -62,8 +53,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # DELETE /blogs/1
-  # DELETE /blogs/1.json
   def destroy
     @blog.destroy
     respond_to do |format|
@@ -78,13 +67,15 @@ class BlogsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_blog
     @blog = Blog.friendly.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def blog_params
     params.require(:blog).permit(:title, :body, :topic_id)
+  end
+
+  def set_sidebar_topics
+    @sidebar_topics = Topic.with_blogs
   end
 end
