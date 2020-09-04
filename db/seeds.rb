@@ -95,7 +95,7 @@ puts "Blog posts created."
 5.times do |x|
   Skill.create!(
     title: "Skill #{x}",
-    percent_utilized: 15,
+    percent_utilized: 15 * x,
   )
 end
 

@@ -1,16 +1,38 @@
-<div class="text-center">
-  <h1>About page</h1>
-  <hr>
+<div class="app-card-container">
+  <div class="card">
+    <div class="text-center">
+      <h1>About</h1>
+      <hr>
 
-  <div class="row">
+      <div class="row">
 
-    <div class="col-md-5">
-      <%= image_tag "https://placehold.it/300x400", width: 300,
+        <div class="col-md-5">
+          <%= image_tag "https://placehold.it/300x400", width: 300,
                                   alt: "profile picture" %>
+        </div>
+        <div class="col-md-7">
+          Content - lorem ipsum
+          <p>Fill in your information here :)</p>
+
+          <div class="skills">
+            <% @skills.each do |skill| %>
+              <div class="skill">
+                <p><%= skill.title%></p>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-info"
+                     role="progressbar"
+                     aria-valuenow="<%= skill.percent_utilized %>"
+                     aria-valuemax="100"
+                     style="width: <%= skill.percent_utilized %>%">
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div class="col-md-7">
-      Content - lorem ipsum
-      <p>Fill in your information here :)</p>
-    </div>
+
   </div>
 </div>
