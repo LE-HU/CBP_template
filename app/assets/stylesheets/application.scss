@@ -1,8 +1,28 @@
 @import "bootstrap";
 
+@font-face {
+  font-family: 'Lato';
+  src: font-url('Lato-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: font-url('RobotoSlab-Regular.ttf')
+}
+
 /*
  * Globals
  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab',
+    serif;
+}
 
 /* Links */
 a,
@@ -38,6 +58,8 @@ body {
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  font-family: 'Lato',
+    sans-serif;
 }
 
 .cover-container {

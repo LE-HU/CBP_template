@@ -4,5 +4,5 @@
 
   <%= render partial: 'blogs/admin_actions', locals: {blog: blog} %>
 
-  <p><%= blog.body %></p>
+  <p><%= markdown blog.body %></p>
 </div>
