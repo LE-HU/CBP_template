@@ -24,11 +24,21 @@ puts "Topics created."
 3.times do |x|
   Blog.create!(
     title: "Blog post #{x}",
-    body: "lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
+    body: "# Markdown
+    ## is fully functional
+    ### with code highlighting
+
+    ```ruby
+    puts 'some string'
+    def method
+    end
+    ```
+
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
     ",
     topic_id: Topic.first.id,
   )
@@ -37,11 +47,21 @@ end
 3.times do |x|
   Blog.create!(
     title: "Blog post #{x}",
-    body: "lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
+    body: "# Markdown
+    ## is fully functional
+    ### with code highlighting
+
+    ```ruby
+    puts 'some string'
+    def method
+    end
+    ```
+
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
     ",
     topic_id: Topic.second.id,
   )
@@ -50,11 +70,21 @@ end
 3.times do |x|
   Blog.create!(
     title: "Blog post #{x}",
-    body: "lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
-    lorem ipsum paragraph latin sentence ok
+    body: "# Markdown
+    ## is fully functional
+    ### with code highlighting
+
+    ```ruby
+    puts 'some string'
+    def method
+    end
+    ```
+
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
+    lorem ipsum paragraph latin sentence
     ",
     topic_id: Topic.last.id,
   )

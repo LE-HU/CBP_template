@@ -25,6 +25,8 @@ gem 'cocoon', '~> 1.2', '>= 1.2.14'
 gem 'twitter', '~> 7.0'
 gem 'dotenv', '~> 2.7', '>= 2.7.6'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+gem 'redcarpet', '~> 3.5'
+gem 'coderay', '~> 1.1', '>= 1.1.3'
 
 group :development, :test do
 

@@ -143,21 +143,20 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('bg2.jpg') no-repeat;
+  background: image-url('aurora.jpg') no-repeat;
   background-size: cover;
 }
 
 .tech-news {
-  color: black;
+  color: white;
   margin: 20px;
-
 }
 
 .tech-news a {
   color: red;
-
 }
 
 .tech-news>.card {
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
 }
