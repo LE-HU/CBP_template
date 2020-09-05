@@ -46,7 +46,7 @@ end
 
 3.times do |x|
   Blog.create!(
-    title: "Blog post #{x}",
+    title: "Blog post #{x + 3}",
     body: "# Markdown
 ## is fully functional
 ### with code highlighting
@@ -66,7 +66,7 @@ end
 
 3.times do |x|
   Blog.create!(
-    title: "Blog post #{x}",
+    title: "Blog post #{x + 6}",
     body: "# Markdown
 ## is fully functional
 ### with code highlighting
@@ -116,13 +116,4 @@ puts "Skills created."
 end
 
 puts "Portfolio items created."
-
-# 3.times do |x|
-#   Technology.create!(
-#     name: "Technology #{x}",
-#     portfolio_id: Portfolio.last.id,
-
-#   )
-# end
-
 puts "Technologies created."
