@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    LehuViewTool::Renderer.copyright "Wojciech Lech",
+    LehuViewTool::Renderer.copyright "The Author",
                                      "All  rights reserved"
   end
 
