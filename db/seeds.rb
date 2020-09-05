@@ -103,16 +103,26 @@ puts "Skills created."
     main_image: "http://placehold.it/600x400",
     thumb_image: "http://placehold.it/350x200",
   )
+  Portfolio.last.technologies.build(
+    name: "Technology #{x}",
+    portfolio_id: Portfolio.last.id,
+
+  ).save
+  Portfolio.last.technologies.build(
+    name: "Technology #{x + 1}",
+    portfolio_id: Portfolio.last.id,
+
+  ).save
 end
 
 puts "Portfolio items created."
 
-3.times do |x|
-  Technology.create!(
-    name: "Technology #{x}",
-    portfolio_id: Portfolio.last.id,
+# 3.times do |x|
+#   Technology.create!(
+#     name: "Technology #{x}",
+#     portfolio_id: Portfolio.last.id,
 
-  )
-end
+#   )
+# end
 
 puts "Technologies created."
