@@ -1,24 +1,14 @@
-# README
+# CBP_template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Cover/Blog/Portfolio website template
 
-Things you may want to cover:
+Project presents a working solution of:
 
-* Ruby version
+- Cover layout including home/about/contact static pages.
+- Blog site template with markdown integration.
+- Portfolio showcase using bootstrap cards for portfolio items.
+- Twitter API connection for tweet feed as an extras.
 
-* System dependencies
+Aesthetics/layout composed using the Bootstrap framework.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Fork/reuse instructions
