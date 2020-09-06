@@ -22,8 +22,14 @@ Aesthetics/layout composed using the Bootstrap framework.
 - Seeds file populated with all of the example resources needed to populate the pages - run the following in your terminal
 
 ```ruby
-rails db:create
 rails db:setup
 ```
 
 - Authorize a user by setting it's role parameter to :site_admin. Mind presence of example admin user in predefined seeds.rb file.
+
+# Heroku live app
+
+- Live app available for demo @ https://cbp-template.herokuapp.com/
+- Site_admin password changed from default seed-one :)
+
+# MIT License

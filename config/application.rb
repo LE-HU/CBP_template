@@ -35,5 +35,8 @@ module PersonalWebsite
 
     # Eager loading for lib
     config.eager_load_paths << "#{Rails.root}/lib"
+
+    # Secret key for devise @ heroku
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
   end
 end
